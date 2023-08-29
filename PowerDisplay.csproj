@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\PowerDisplay\bin\Win64_Shipping_Client\PowerDisplay.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <LangVersion>8.0</LangVersion>
+    <ProjectGuid>{0A4938F3-0E83-430A-BF71-628A27C6ABCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>PowerDisplay</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.6.1.2</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>System</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\PowerDisplay\bin\Win64_Shipping_Client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bannerlord.UIExtenderEx">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\261550\2859222409\bin\Win64_Shipping_Client\Bannerlord.UIExtenderEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="SandBox.ViewModelCollection, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SandBox\bin\Win64_Shipping_Client\SandBox.ViewModelCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Emit.ILGeneration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaleWorlds.CampaignSystem">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Library">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ObjectSystem">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.ObjectSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HarmonyExtraInfoText.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\AllowNullAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\DisallowNullAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\DoesNotReturnAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\DoesNotReturnIfAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MaybeNullAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MaybeNullWhenAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MemberNotNullAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MemberNotNullWhenAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\NotNullAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\NotNullIfNotNullAttribute.cs" />
+    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\NotNullWhenAttribute.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="HarmonyCount.cs" />
+    <Compile Include="SubModule.cs" />
+    <Compile Include="Runtime\CompilerServices\IsExternalInit.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
