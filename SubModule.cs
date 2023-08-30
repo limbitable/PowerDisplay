@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
+using System.UIExtenderEx;
 using System.Xml.Serialization;
-using HarmonyLib;
-using SandBox.ViewModelCollection.Nameplate;
+using Bannerlord.UIExtenderEx;
+using PowerDisplay.UIExtenderEx;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
@@ -15,21 +16,20 @@ namespace PowerDisplay
 
         protected override void OnSubModuleLoad()
         {
-   
-            Harmony harmony = new Harmony("PowerDisplay");
+            UIExtender uiExtender = new UIExtender("PowerDisplay");
+            List<Type> uiExtenderTypes = new List<Type>() { typeof(PartyNameplateMixin)};
+
+            if (!File.Exists(ConfigFile))
+                CreateXML();
+
             Config config = ReadXML(ConfigFile);
             if (config.DisplayOnInspect)
-            {
-                MethodInfo original2 = AccessTools.PropertyGetter(typeof(PartyNameplateVM), "ExtraInfoText");
-                MethodInfo postfix2 = AccessTools.Method(typeof(HarmonyExtraInfoText), "Postfix", (Type[])null, (Type[])null);
-                harmony.Patch((MethodBase)original2, (HarmonyMethod)null, new HarmonyMethod(postfix2), (HarmonyMethod)null, (HarmonyMethod)null);
-            }
+                uiExtenderTypes.Add(typeof(PartyNameplateExtraInfoPatch));
             else
-            {
-                MethodInfo original = AccessTools.PropertyGetter(typeof(PartyNameplateVM), "Count");
-                MethodInfo postfix = AccessTools.Method(typeof(HarmonyCount), "Postfix", (Type[])null, (Type[])null);
-                harmony.Patch((MethodBase)original, (HarmonyMethod)null, new HarmonyMethod(postfix), (HarmonyMethod)null, (HarmonyMethod)null);
-            }
+                uiExtenderTypes.Add(typeof(PartyNameplateCountPatch));
+
+            uiExtender.Register(uiExtenderTypes);
+            uiExtender.Enable();
         }
 
         private Config ReadXML(string xml)
@@ -37,6 +37,12 @@ namespace PowerDisplay
             XmlSerializer serializer = new XmlSerializer(typeof(Config));
             using FileStream fs = new FileStream(xml, FileMode.Open);
             return (Config)serializer.Deserialize(fs);
+        }
+
+        private void CreateXML()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Config));
+            serializer.Serialize(File.Create(ConfigFile), new Config() { DisplayOnInspect = false });
         }
     }
 }
