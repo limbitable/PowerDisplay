@@ -40,9 +40,8 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Bannerlord.UIExtenderEx">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\261550\2859222409\bin\Win64_Shipping_Client\Bannerlord.UIExtenderEx.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Bannerlord.UIExtenderEx, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Bannerlord.UIExtenderEx.2.8.0\lib\netstandard2.0\Bannerlord.UIExtenderEx.dll</HintPath>
     </Reference>
     <Reference Include="netstandard" />
     <Reference Include="SandBox.ViewModelCollection, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
@@ -72,23 +71,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HarmonyExtraInfoText.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\AllowNullAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\DisallowNullAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\DoesNotReturnAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\DoesNotReturnIfAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MaybeNullAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MaybeNullWhenAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MemberNotNullAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\MemberNotNullWhenAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\NotNullAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\NotNullIfNotNullAttribute.cs" />
-    <Compile Include="obj\x64\Debug\net472\NuGet\EE23C1094763C0A0D971660F55E57794C4AC7A06\Nullable\1.3.0\Nullable\NotNullWhenAttribute.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="HarmonyCount.cs" />
     <Compile Include="SubModule.cs" />
-    <Compile Include="Runtime\CompilerServices\IsExternalInit.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="UIExtenderEx\PartyNameplateExtraInfoPatch.cs" />
+    <Compile Include="UIExtenderEx\PartyNameplateMixin.cs" />
+    <Compile Include="UIExtenderEx\PartyNameplateCountPatch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
